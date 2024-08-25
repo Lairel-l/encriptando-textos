@@ -1,0 +1,357 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "EB Garamond", serif;
+    
+}
+
+body {
+    background-image: url(/imagenes/paisaje-rosapastel.jpg); /*Fondo*/
+    background-repeat: no-repeat; /*no repetir imagen*/
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    color: black;
+    overflow-x: hidden; /*evitar desplazamiento en el eje x*/
+}
+
+                /*--------Encabezado--------*/
+header {
+    width: 100%;
+    height: 170px; /*Separación del top al main*/
+
+}
+
+.logo{
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 20px;
+
+}
+
+#titulo{
+    padding-top: 30px; 
+    display: inline-block;
+    text-align: center;
+    width: calc(100% - 228px);
+}
+
+    /*----------------------sección 1----------------------*/
+
+.exclamacion{
+    position: absolute;
+    top: 25px;
+}
+    
+#condiciones{
+    padding-top: 19px;
+    display: inline-block;
+    text-align: center;
+    padding-left: 17px;
+}
+    
+#grupo-condicion{
+    position: absolute;
+    top: 13%;
+    left: 40%;
+    text-align: center;
+    height: calc(100% - 70px);
+}
+
+                /*--------Contenido y función----------*/
+main{
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    display: flex; /*División de secciones*/ 
+    justify-content: space-between;
+}
+
+      /*----------------------Sección 2----------------------*/
+    /*caja*/
+.escribir{
+    position: absolute;
+    left: 150px;
+    top: 95px;
+    padding-left: 100px;
+    width: 1080px;
+    height: 60px;
+}
+
+.caja-escribir{
+    width: 40%;
+    height: 400%;
+    border: none;
+    background:white;/* rgba(199, 121, 160, 0);*/
+    color: rgb(149, 205, 255); /*comprobar color, es color de texto al escribir*/
+    font-size: 28px;
+    font-weight: 400px;
+    font-family: "EB Garamond", serif;
+    border-radius: 13px;
+    cursor: text;
+}
+
+#placeholder::placeholder{
+    color: black;/*aliceblue;*/
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+
+
+            /*-------Botones encriptado-desencriptado--------*/
+/*caracteristicas generales de los botones encrip/desencrip*/
+.encriptar-desencriptar-botones{
+    position: absolute;
+    padding-top: 256px;
+    left: 195px;
+    top: 125px;
+    padding-left: 100px;
+    width: 1080px;
+    height: 60px;
+}
+    /*diseño de los botones*/
+/*botón encriptar*/
+.encriptar{
+    /*alineacion*/
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 130px;
+    height: 40px;
+    background: black; /*fondo del boton*/
+    color: white; /*color de letra*/
+    font-size: 16px;
+    font-weight: 400px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-right: 45px;
+    text-transform: uppercase; /*texto en mayuscula*/
+    transition: .3s ease all; /*tiempo de animación*/
+    /*aspectos para la animación*/
+    position: relative;
+    overflow: hidden; /*la capa se adapte al botón*/
+}
+/*animación del botón encriptar*/
+.encriptar::after{
+    content: "";
+    width: 1px;
+    height: 1px;
+    background: none; /*no se vea el color*/
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transition: .3s ease-in-out all; /*entrar despacio*/
+    border-radius: 100px;
+    transform-origin: center;
+}
+.encriptar span{
+    position: relative;
+    z-index: 2;
+    transition: .3s ease all;
+}
+.encriptar:hover::after{
+    transform: scale(135); /*i.e. cambia de tamaño*/
+    background: tomato; /*color de prueba*/
+}
+/*botón desencriptar*/
+.desencriptar{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 40px;
+    background: black;
+    color: white; 
+    font-size: 16px;
+    font-weight: 400px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    text-transform: uppercase;
+    transition: .3s ease all;
+    /*aspectos para la animación*/
+    position: relative;
+    overflow: hidden;
+}
+/*animación del botón desencriptar*/
+.desencriptar::after{
+    content: "";
+    width: 1px;
+    height: 1px;
+    background: none; /*no se vea el color*/
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transition: .3s ease-in-out all; /*entrar despacio*/
+    border-radius: 100px;
+    transform-origin: center;
+}
+.desencriptar span{
+    position: relative;
+    z-index: 2;
+    transition: .3s ease all;
+}
+.desencriptar:hover::after{
+    transform: scale(173); /*i.e. cambia de tamaño*/
+    background: tomato; /*color de prueba*/
+}
+
+/*----------------------Sección 3----------------------*/
+.seccion3{
+    position: relative;
+    display: block;
+    width: 330px; /*ancho del contenedor*/
+    height: 300px; /*altura del contenedor*/
+    right: 250px;
+    padding-right: 20px;
+    top: 70px;
+    background-color: aqua; /*color de prueba*/
+    box-sizing: border-box;
+    border-radius: 13px;
+    box-shadow: 0px 24px 32px -8px rgba(0,0,0,0.5);
+}
+
+.imagen{
+    position: absolute;
+    left: 75px;
+    box-sizing: border-box;
+    padding-top: 40px;
+}
+
+.texto-imagen p{
+    font-family: "EB Garamond", serif;
+    font-size: 20px;
+    font-weight: 400px;
+    padding-left: 10px;
+    padding-top: 190px;
+    text-align: center;
+    color: rgb(30, 29, 71); /*color de prueba*/
+}
+
+/*Animacion de Loading*/
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: fit-content;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 30px;
+    color:#0000;
+    background: linear-gradient(90deg,#000 25%,#8A9B0F 0 50%,#C02942 0 75%,#00A0B0 0) 0 0/400% 100%;
+    -webkit-background-clip:text;
+            background-clip:text;
+    animation:l10 5s infinite cubic-bezier(0.3,1,0,1);
+}
+.loader:before {
+    content:"Loading..."
+}
+@keyframes l10 {
+    25% {background-position: calc(1*100%/3) 0}
+    50% {background-position: calc(2*100%/3) 0}
+    75% {background-position: calc(3*100%/3) 0}
+    100%{background-position: calc(4*100%/3) 0}
+}
+.hidden{
+    display: none;
+}
+
+
+/*----------texto obtenido despúes de la opción marcada-------------*/
+.texto{
+    position: absolute;
+    bottom: 330px;
+    width: 320px;
+    height: 450px;
+    padding: 0;
+    box-sizing: border-box;
+    margin-left: 25px;
+}
+
+.texto-encriptado-desencriptado p{
+    font-family: "EB Garamond", serif;
+    font-size: 28px;
+    font-weight: 400px;
+    padding-left: 30px;
+    padding-top: 20px;
+    color: blue;/*color de prueba*/
+}
+
+             /*--------Botón copiar---------*/
+/*posición del botón copiar*/
+.copiar-boton{
+    position: absolute;
+    padding-top: 180px;
+    left: 5px;
+    top: 128px;
+    padding-left: 100px;
+    width: 1080px;
+    height: 60px;
+}
+/*caracteristicas del botón copiar*/
+.copiar{
+    /*alineacion*/
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 130px;
+    height: 40px;
+    background: black; /*fondo del boton*/
+    color: white; /*color de letra*/
+    font-size: 16px;
+    font-weight: 400px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-right: 45px;
+    text-transform: uppercase; /*texto en mayuscula*/
+    transition: .3s ease all; /*tiempo de animación*/
+    /*aspectos para la animación*/
+    position: relative;
+    overflow: hidden; /*la capa se adapte al botón*/
+}
+/*animación del botón copiar*/
+.copiar::after{
+    content: "";
+    width: 1px;
+    height: 1px;
+    background: none; /*no se vea el color*/
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transition: .3s ease-in-out all; /*entrar despacio*/
+    border-radius: 100px;
+    transform-origin: center;
+}
+.copiar span{
+    position: relative;
+    z-index: 2;
+    transition: .3s ease all;
+}
+.copiar:hover::after{
+    transform: scale(135); /*i.e. cambia de tamaño*/
+    background: tomato; /*color de prueba*/
+}
+
+/*----------------------Pie de Página----------------------*/
+footer{
+    position:fixed;
+    left:0px;
+    bottom:5px;
+    height:50px; /*alto*/
+    width:100%;
+    background: rgba(4, 170, 109, 0.1); /*color de prueba*/
+}
+
+.texto-footer{
+    color: black;
+    text-align: center;
+}
+
+.redes{
+    text-align: center;
+}

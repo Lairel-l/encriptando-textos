@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css"> <!--Referenciando css-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Fuente de la página-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <title>Encriptador de texto. Reto Alura</title>
+</head>
+<body>
+    <header> <!--Encabezado-->
+            <img class="logo" src="imagenes/cat-eye.png" width="80" alt="logo_ojo_de_gato">
+            <h1 id="titulo">Transforma Tu Mensaje en Un Código Secreto!</h1>
+            <section class="seccion1">
+                
+                <div id="grupo-condicion">
+                    <img class="exclamacion" src="imagenes/signo-exclamacion.png" width="12" alt="signo_de_exclamacion"/>
+                    <!--Texto de indicaciones del texto a ingresar-->
+                    <p id="condiciones">Condiciones del texto a ingresar: 
+                    <li>En letras minusculas.</li><li>Solo letras sin acento.</li>
+                    <li>No ingresar caracteres especiales.</li></p>
+                </div>
+                
+            </section>
+    </header>
+    <main>
+        <section class="seccion2">
+            <div class="escribir"> <!--Apartado del cuadro donde el usuario ingresa el texto-->
+                <textarea class="caja-escribir" cols="60" rows="25" id="placeholder" placeholder="Escribe tu texto aquí..."></textarea>
+            </div>
+            <div class="encriptar-desencriptar-botones"> <!--Botones para encriptar y desencriptar-->
+                <button class="encriptar"><span>Encriptar</span></button>
+                <button class="desencriptar"><span>Desencriptar</span></button>
+            </div>
+        </section>
+        <section class="seccion3"><!--Área de mostrar texto despues de selección-->
+            <div class="imagen">
+                <img src="imagenes/encriptando.png" width="180" alt="ilustración_de_gato_escribiendo" class="gato-escribiendo"/>
+                <div class="loader hidden"></div>
+            </div>
+            <div class="texto-imagen">
+                <p>Ingresa tu texto para comenzar a encriptarlo/desencriptarlo...</p>
+            </div>
+            <div class="texto">
+                <p class="texto-encriptado-desencriptado"></p>
+            </div>
+            <div class="copiar-boton"> <!--Botón de copiar-->
+                <button class="copiar"><span>Copiar texto</span></button>
+            </div>
+        </section>
+    </main>
+    <footer> <!--Pie de página-->
+        <p class="texto-footer">Creación de Jessica Alvarez Centeno (lairel-l). Proyecto creado en Agosto 2024.</p>
+        <p class="redes">
+        <a class="github" href="https://github.com/Lairel-l">GitHub</a> <a class="linkedin" href="https://www.linkedin.com/in/jessica-alvarez-centeno/">LinkedIn</a> <a class="x" href="https://x.com/lairel_l">X</a>
+        </p>
+    </footer>
+    <script src="/script.js"></script> <!--Referenciando el JavaScript-->
+</body>
+</html>
